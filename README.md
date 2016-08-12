@@ -60,12 +60,13 @@ jQuery.ajax({
 });
 ```
 ### Command line testing
+POST Command `curl -H "Content-Type: application/json" -H "Accept: application/json" -d '{"name":"yoda"}' https://vsapi-seche.c9users.io/categories`
 
-`curl -H "Content-Type: application/json" -H "Accept: application/json" -d '{"name":"yoda"}' https://vsapi-seche.c9users.io/categories`
+rake spec
 
 ### Api Requirements
 Below are the 4 required api queries requested. They all return a JSON object.
-Also included in the code is all the functionalities for CRUD (Create, read, update and delete) that was generated with scaffold. This let's me manipulate the database but would be taken away from the general public's access.
+Also included in the code is all the functionalities for CRUD (Create, read, update and delete) that was generated with scaffold. This let's me manipulate the database but I commented out the routes access.
 
 ### How to
 - In the untar app folder run `bundle install`.
@@ -75,23 +76,28 @@ Also included in the code is all the functionalities for CRUD (Create, read, upd
 You can also get the code from github: `https://github.com/seche/vsapi.git` Or ask to collaborate on Cloud9.
 
 #### Show all items
+`curl -H "Content-Type: application/json" -H "Accept: application/json" --get https://vsapi-seche.c9users.io/items`
+
 `/items`
 
 https://vsapi-seche.c9users.io/items
 
 #### Show all items in a specific category
+`curl -H "Content-Type: application/json" -H "Accept: application/json" --get https://vsapi-seche.c9users.io/categoryItems/1`
 
 `/categoryItems/:category_id`
 
 https://vsapi-seche.c9users.io/categoryItems/1
 
 #### Show all sold items for a specific seller
+`curl -H "Content-Type: application/json" -H "Accept: application/json" --get https://vsapi-seche.c9users.io/soldItems/3`
 
 `/soldItems/:seller_id`
 
 https://vsapi-seche.c9users.io/soldItems/3
 
 #### Show one item
+`curl -H "Content-Type: application/json" -H "Accept: application/json" --get https://vsapi-seche.c9users.io/items/1`
 
 `/items/:item_id`
 

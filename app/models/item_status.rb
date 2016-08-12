@@ -1,5 +1,5 @@
 class ItemStatus < ApplicationRecord
     has_many :items
     validates_associated :items
-    validates :name, presence: { message: "Item Status name must be given please" }
+    validates :name, presence: { message: "Item Status name must be given please" }, :length => { :minimum => 2 }
 end

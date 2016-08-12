@@ -39,4 +39,4 @@ Item.create!([{
 
 p "Created #{Item.count} Items"
 
-p Item.select(:title, :description, :price, :published_date, :category_id, :item_status_id, :seller_id, :created_at).last
+#p Item.select(:title, :description, :price, :published_date, :category_id, :item_status_id, :seller_id, :created_at).last
