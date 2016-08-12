@@ -3,7 +3,9 @@ VarageSale API
 
 
 ## Cloud 9
-Start Server: rails s -b $IP -p $PORT
+Start Server:
+
+rails s -b $IP -p $PORT
 
 ### Commands
 rails new vsapi --api
@@ -19,7 +21,7 @@ rails g migration AddSellerToItems seller:references
 
 rails g serializer Seller
 rails g serializer Item
-rails g serializer Item_status
+rails g serializer ItemStatus
 rails g serializer Category
 
 rake db:migrate RAILS_ENV=development
