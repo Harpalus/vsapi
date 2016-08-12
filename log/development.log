@@ -129,3 +129,92 @@ Processing by SellersController#index as HTML
 Completed 200 OK in 13ms (Views: 2.0ms | ActiveRecord: 0.9ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT "sellers".* FROM "sellers"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "sellers" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Luke"], ["longitude", #<BigDecimal:2277b60,'-0.79020373E2',18(36)>], ["latitude", #<BigDecimal:2276300,'0.43850855E2',18(36)>], ["created_at", 2016-08-12 01:15:11 UTC], ["updated_at", 2016-08-12 01:15:11 UTC]]
+  [1m[35m (40.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sellers" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ruby"], ["longitude", #<BigDecimal:1e6b800,'-0.79383184E2',18(36)>], ["latitude", #<BigDecimal:1e6b030,'0.43653226E2',18(36)>], ["created_at", 2016-08-12 01:15:11 UTC], ["updated_at", 2016-08-12 01:15:11 UTC]]
+  [1m[35m (17.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "sellers" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Tom"], ["longitude", #<BigDecimal:1a44560,'-0.79020373E2',18(36)>], ["latitude", #<BigDecimal:1a44060,'0.43850855E2',18(36)>], ["created_at", 2016-08-12 01:15:11 UTC], ["updated_at", 2016-08-12 01:15:11 UTC]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "sellers"[0m
+  [1m[36mSeller Load (0.2ms)[0m  [1m[34mSELECT  "sellers"."name", "sellers"."latitude" FROM "sellers" ORDER BY "sellers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mItemStatus Load (0.3ms)[0m  [1m[34mSELECT "item_statuses".* FROM "item_statuses"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "item_statuses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Available"], ["created_at", 2016-08-12 01:15:11 UTC], ["updated_at", 2016-08-12 01:15:11 UTC]]
+  [1m[35m (21.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "item_statuses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Pending"], ["created_at", 2016-08-12 01:15:11 UTC], ["updated_at", 2016-08-12 01:15:11 UTC]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "item_statuses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sold"], ["created_at", 2016-08-12 01:15:11 UTC], ["updated_at", 2016-08-12 01:15:11 UTC]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "item_statuses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Expired"], ["created_at", 2016-08-12 01:15:11 UTC], ["updated_at", 2016-08-12 01:15:11 UTC]]
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "item_statuses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Banned"], ["created_at", 2016-08-12 01:15:11 UTC], ["updated_at", 2016-08-12 01:15:11 UTC]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "item_statuses"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Baby Items"], ["created_at", 2016-08-12 01:15:11 UTC], ["updated_at", 2016-08-12 01:15:11 UTC]]
+  [1m[35m (18.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Books"], ["created_at", 2016-08-12 01:15:11 UTC], ["updated_at", 2016-08-12 01:15:11 UTC]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Clothing"], ["created_at", 2016-08-12 01:15:11 UTC], ["updated_at", 2016-08-12 01:15:11 UTC]]
+  [1m[35m (21.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Electronics & Entertainment"], ["created_at", 2016-08-12 01:15:11 UTC], ["updated_at", 2016-08-12 01:15:11 UTC]]
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Handmade Items"], ["created_at", 2016-08-12 01:15:11 UTC], ["updated_at", 2016-08-12 01:15:11 UTC]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Load (5.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSeller Load (0.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSeller Load (0.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItemStatus Load (0.1ms)[0m  [1m[34mSELECT  "item_statuses".* FROM "item_statuses" WHERE "item_statuses"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mSeller Load (0.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "published_date", "created_at", "updated_at", "itemStatus_id", "category_id", "seller_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Baby poo"], ["description", "Fresh out the oven"], ["price", 2.99], ["published_date", 2016-08-12 01:47:50 UTC], ["created_at", 2016-08-12 01:47:50 UTC], ["updated_at", 2016-08-12 01:47:50 UTC], ["itemStatus_id", 5], ["category_id", 1], ["seller_id", 2]]
+  [1m[35m (15.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mItemStatus Load (0.0ms)[0m  [1m[34mSELECT  "item_statuses".* FROM "item_statuses" WHERE "item_statuses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSeller Load (0.1ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "published_date", "created_at", "updated_at", "itemStatus_id", "category_id", "seller_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Life of PI"], ["description", "Got as a gift but already had a copy. Brand new."], ["price", 22.97], ["published_date", 2016-08-12 01:47:50 UTC], ["created_at", 2016-08-12 01:47:51 UTC], ["updated_at", 2016-08-12 01:47:51 UTC], ["itemStatus_id", 1], ["category_id", 2], ["seller_id", 2]]
+  [1m[35m (16.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mItemStatus Load (0.1ms)[0m  [1m[34mSELECT  "item_statuses".* FROM "item_statuses" WHERE "item_statuses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mSeller Load (0.1ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "published_date", "created_at", "updated_at", "itemStatus_id", "category_id", "seller_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Columbia Jacket"], ["description", "Used for one winter, freshly washed."], ["price", 150.0], ["published_date", 2016-08-12 01:47:50 UTC], ["created_at", 2016-08-12 01:47:51 UTC], ["updated_at", 2016-08-12 01:47:51 UTC], ["itemStatus_id", 3], ["category_id", 3], ["seller_id", 3]]
+  [1m[35m (15.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items"."title", "items"."description", "items"."price", "items"."published_date", "items"."category_id", "item_status_id", "items"."seller_id", "items"."created_at" FROM "items" ORDER BY "items"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
