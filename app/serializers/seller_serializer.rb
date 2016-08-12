@@ -1,3 +1,3 @@
 class SellerSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, longitude, :latitude
 end
