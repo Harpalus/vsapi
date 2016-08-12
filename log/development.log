@@ -218,3 +218,15 @@ Completed 200 OK in 13ms (Views: 2.0ms | ActiveRecord: 0.9ms)
   [1m[35m (15.9ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
   [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items"."title", "items"."description", "items"."price", "items"."published_date", "items"."category_id", "item_status_id", "items"."seller_id", "items"."created_at" FROM "items" ORDER BY "items"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/ubuntu/workspace/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/ubuntu/workspace/config/environment.rb:5)
