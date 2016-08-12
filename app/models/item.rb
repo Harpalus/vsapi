@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-    has_one :category
-    has_one :item_status
-    has_one :seller
+    belongs_to  :category
+    belongs_to  :item_status
+    belongs_to  :seller
 end
