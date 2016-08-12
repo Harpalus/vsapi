@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
 
   # GET /items
   def index
-    @items = Item.getAllItems
+    @items = Item.items
     filterBannedItems
     render json: @items
     
